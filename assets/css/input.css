@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply flex flex-col items-center justify-center h-screen bg-cover bg-center bg-[#f2f2f2];
+}
+.signInForm svg {
+  @apply self-center mb-4;
+}
+h1 {
+  @apply mb-5 font-bold text-2xl text-[#383838];
+}
+.wrapper {
+  @apply rounded-lg shadow-lg shadow-zinc-300 hover:shadow-zinc-400 bg-slate-200 flex flex-row h-[450px] w-fit overflow-hidden;
+}
+.image-div {
+  @apply h-[450px] w-[400px] bg-[url(../../img/23.jpg)] bg-cover hidden md:flex bg-center;
+}
+.signInForm {
+  @apply h-[450px] w-[350px] bg-[#ffffff] flex flex-col justify-center  px-4;
+}
+.input {
+  @apply border-b-2 border-gray-300 bg-transparent w-full text-[#1e1d1d];
+}
+.form_ctrl {
+  @apply relative  h-16 pt-7;
+}
+.form_ctrl label {
+  @apply absolute top-[20px]  left-0 text-[#1e1d1d] duration-500 ease-in;
+}
+.form_ctrl label span {
+  @apply inline-block;
+}
+
+.form_ctrl .input:focus + label span,
+.form_ctrl .input:valid + label span,
+.form_ctrl .input:hover + label span {
+  @apply -translate-y-4 left-0 text-[#1e1d1d] duration-500 ease-in;
+}
+
+.btn {
+  @apply w-full bg-[#8a68fa] hover:bg-[#694acd] text-[#fff] hover:text-white font-bold rounded-xl shadow-sm shadow-zinc-600 py-4 mt-7;
+}
+.signInForm p {
+  @apply text-[#1e1d1d] text-sm ml-4 mt-3;
+}
+.signInForm p a {
+  @apply text-orange-500;
+}
